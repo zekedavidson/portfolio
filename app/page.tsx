@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import Introduction from '@/components/ui/introduction'
+import IntroductionText from '@/components/ui/introductionText'
+import IntroductionImage from '@/components/ui/introductionImage'
 
 const page = () => {
   return (
@@ -17,31 +18,25 @@ const page = () => {
             </Link>
 
             <Link href="#contact" className='text-[18px]'>
-              Contact
+              Connect
             </Link>
           </div>
         </nav>
       </header >
 
-      <section id='introduction' className='w-full px-70 grid grid-cols-2 items-center'>
+      <section id='introduction' className='w-full px-60 grid grid-cols-2 items-center'>
         {/* Image */}
-        <div className="flex px-30 pt-30 pb-0 justify-start max-h-[700px]">
+        <div className="flex px-30 pt-30 pb-0 justify-start max-h-[800px]">
           <div className="w-full h-full max-w-[350px]">
             <div className="aspect-2/3 w-full h-full relative shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)]">
-              <Image
-                src="/gary.png"
-                alt="gary"
-                fill
-                className="object-cover grayscale hover:grayscale-0"
-                priority
-              />
+              <IntroductionImage />
             </div>
           </div>
         </div>
 
         {/* Text */}
-        <div className='flex flex-cols items-center text-center justify-center relative'>
-          <Introduction />
+        <div className='flex flex-cols relative'>
+          <IntroductionText />
         </div>
 
       </section>

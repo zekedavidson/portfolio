@@ -2,10 +2,13 @@
 import { useRef } from 'react'
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { Clock } from '@/components/ui/clock'
+import Image from 'next/image';
 
 const FONT_WEIGHTS = {
     subtitle: { min: 100, max: 400, default: 100 },
-    title: { min: 400, max: 1000, default: 400 }
+    title: { min: 400, max: 1000, default: 400 },
+    superText: { min: 100, max: 400, default: 100 }
 }
 
 const renderText = (text: string, className: string, baseWeight: number = 400) => {
@@ -53,21 +56,32 @@ const setupTextHover = (container: HTMLElement | null, type: keyof typeof FONT_W
 
 };
 
-const Introduction = () => {
+const IntroductionText = () => {
     const titleRef = useRef(null)
     const subtitleRef = useRef(null)
+    const superTextRef = useRef(null)
 
     useGSAP(() => {
         setupTextHover(titleRef.current, 'title');
         setupTextHover(subtitleRef.current, "subtitle");
+        setupTextHover(superTextRef.current, "superText");
+
     }, [])
 
     return (
         <section id="title-heading">
-            <h1 ref={titleRef}>{renderText("Gary Bhatia", 'text-[110px]', 400)}</h1>
-            <p ref={subtitleRef}>{renderText("Full Stack Developer", 'text-5xl italic', 100)}</p>
+            {/* <p ref={superTextRef}>{renderText("Hi I'm", 'text-5xl text-left', 100)}</p> */}
+            <div className='items-center justify-center text-center'>
+                <h1 ref={titleRef}>{renderText("Gary Bhatia", 'text-[120px]', 400)}</h1>
+                <p ref={subtitleRef}>{renderText("Web Developer", 'text-6xl italic', 100)}</p>
+            </div>
+
+            <div className='flex items-center justify-center mt-5 gap-3'>
+                <p>IST</p><Clock />
+            </div>
+
         </section>
     )
 }
 
-export default Introduction
+export default IntroductionText
