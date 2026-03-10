@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { DM_Sans, Space_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const fontSans = DM_Sans({
   subsets: ["latin"],
+  variable: "--font-sans",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const fontMono = Space_Mono({
+  weight: ["400", "700"],
   subsets: ["latin"],
+  variable: "--font-mono",
 });
 
 export const metadata: Metadata = {
@@ -23,32 +24,27 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${fontSans.variable} ${fontMono.variable} antialiased`}
       >
-        <div className="min-h-screen w-full bg-[#f9fafb] relative">
-          {/* Diagonal Fade Grid Background - Top Right */}
+        <div className="min-h-screen w-full bg-white relative">
+          {/* Grid Background */}
           <div
             className="absolute inset-0 z-0"
             style={{
               backgroundImage: `
-        linear-gradient(to right, #d1d5db 1px, transparent 1px),
-        linear-gradient(to bottom, #d1d5db 1px, transparent 1px)
+        linear-gradient(to right, #e5e7eb 1px, transparent 1px),
+        linear-gradient(to bottom, #e5e7eb 1px, transparent 1px)
       `,
-              backgroundSize: "32px 32px",
-              WebkitMaskImage:
-                "radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)",
-              maskImage:
-                "radial-gradient(ellipse 80% 80% at 100% 0%, #000 50%, transparent 90%)",
+              backgroundSize: "40px 40px",
             }}
           />
-          {/* Your Content/Components */}
           <main className="relative z-10">
             {children}
           </main>
         </div>
       </body>
-    </html>
+    </html >
   );
 }
