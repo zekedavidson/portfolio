@@ -37,7 +37,7 @@ export default function RootLayout({
         linear-gradient(to right, #e5e7eb 1px, transparent 1px),
         linear-gradient(to bottom, #e5e7eb 1px, transparent 1px)
       `,
-              backgroundSize: "40px 40px",
+              backgroundSize: "2.5vw 2.5vw",
             }}
           />
           <main className="relative z-10">

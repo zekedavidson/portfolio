@@ -38,8 +38,8 @@ export default function IntroductionImage() {
                     // Fade in the spotlight when hovered, fade out when leaving
                     opacity: isHovered ? 1 : 0,
                     // The radial gradient mask creates the "spotlight" circle
-                    WebkitMaskImage: `radial-gradient(200px circle at ${position.x}px ${position.y}px, black 40%, transparent 100%)`,
-                    maskImage: `radial-gradient(200px circle at ${position.x}px ${position.y}px, black 40%, transparent 100%)`,
+                    WebkitMaskImage: `radial-gradient(15vw circle at ${position.x}px ${position.y}px, black 40%, transparent 100%)`,
+                    maskImage: `radial-gradient(15vw circle at ${position.x}px ${position.y}px, black 40%, transparent 100%)`,
                 }}
             >
                 <Image

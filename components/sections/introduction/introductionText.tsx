@@ -3,7 +3,10 @@ import { useRef } from 'react'
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { Clock } from '@/components/ui/clock'
-import Image from 'next/image';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import { GlowEffect } from '@/components/motion-primitives/glow-effect';
+import { HoverBorderGradient } from '@/components/ui/hover-border-gradient';
+HoverBorderGradient
 
 const FONT_WEIGHTS = {
     subtitle: { min: 100, max: 400, default: 100 },
@@ -56,6 +59,8 @@ const setupTextHover = (container: HTMLElement | null, type: keyof typeof FONT_W
 
 };
 
+const springOptions = { bounce: 0.1 };
+
 const IntroductionText = () => {
     const titleRef = useRef(null)
     const subtitleRef = useRef(null)
@@ -72,15 +77,35 @@ const IntroductionText = () => {
         <section id="title-heading">
             {/* <p ref={superTextRef}>{renderText("Hi I'm", 'text-5xl text-left', 100)}</p> */}
             <div className='items-center justify-center text-center'>
-                <h1 ref={titleRef}>{renderText("Gary Bhatia", 'text-[120px]', 400)}</h1>
-                <p ref={subtitleRef}>{renderText("Web Developer", 'text-6xl italic', 100)}</p>
+                <h1 ref={titleRef}>{renderText("Gary Bhatia", 'text-[clamp(3rem,8vw,7.5rem)]', 400)}</h1>
+                <p ref={subtitleRef}>{renderText("Web Developer", 'text-[clamp(1.5rem,4vw,3.75rem)] italic', 100)}</p>
             </div>
 
             <div className='flex items-center justify-center mt-5 gap-3'>
                 <p>IST</p><Clock />
             </div>
+            <div className='mt-5 flex items-center justify-center gap-[10vw]'>
+                <div className="flex justify-center text-center">
+                    <HoverBorderGradient
+                        containerClassName="rounded-full"
+                        as="button"
+                        className="dark:bg-black bg-black text-white dark:text-white flex items-center space-x-3 px-6 hover:cursor-pointer"
+                    >
+                        <span className='flex'>Resume<ArrowUpRight /></span>
+                    </HoverBorderGradient>
+                </div>
+                <div className="flex justify-center text-center">
+                    <HoverBorderGradient
+                        containerClassName="rounded-full"
+                        as="button"
+                        className="dark:bg-black bg-black text-white dark:text-white flex items-center space-x-3 px-6 hover:cursor-pointer"
+                    >
+                        <span className='flex'>Connect<ArrowRight /></span>
+                    </HoverBorderGradient>
+                </div>
+            </div>
 
-        </section>
+        </section >
     )
 }
 
