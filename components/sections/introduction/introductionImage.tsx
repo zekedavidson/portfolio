@@ -45,7 +45,7 @@ export default function IntroductionImage() {
                 } as React.CSSProperties}
             >
                 <Image
-                    src="/gary_og.png"
+                    src="/gary_og.PNG"
                     alt="gary"
                     fill
                     className="object-cover"
