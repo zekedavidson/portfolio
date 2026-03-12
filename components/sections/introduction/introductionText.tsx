@@ -105,9 +105,9 @@ const IntroductionText = () => {
                         as="button"
                         className="dark:bg-black bg-black text-white dark:text-white flex items-center space-x-3 px-6 hover:cursor-pointer"
                     >
-                        <Link href="#connect">
+                        <a href="#connect">
                             <span className='flex'>Connect<ArrowRight /></span>
-                        </Link>
+                        </a>
                     </HoverBorderGradient>
                 </div>
             </div>

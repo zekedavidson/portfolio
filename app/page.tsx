@@ -13,28 +13,28 @@ const page = () => {
       <header className='w-full fixed top-0 z-50 bg-white/80 dark:bg-neutral-950/80 backdrop-blur-md'>
         <nav className='w-full mx-auto px-[4vw] py-2 flex items-center justify-center shadow-[0_8px_30px_rgb(0,0,0,0.12)]'>
           <div className='flex flex-wrap justify-center items-center gap-[3vw]'>
-            <Link href="#introduction" className='text-[clamp(0.875rem,1.2vw,1.125rem)] hover:underline'>
+            <a href="#introduction" className='text-[clamp(0.875rem,1.2vw,1.125rem)] hover:underline'>
               Home
-            </Link>
-            <Link href="#experience" className='text-[clamp(0.875rem,1.2vw,1.125rem)] hover:underline'>
+            </a>
+            <a href="#experience" className='text-[clamp(0.875rem,1.2vw,1.125rem)] hover:underline'>
               Experience
-            </Link>
+            </a>
 
-            <Link href="#projects" className='text-[clamp(0.875rem,1.2vw,1.125rem)] hover:underline'>
+            <a href="#projects" className='text-[clamp(0.875rem,1.2vw,1.125rem)] hover:underline'>
               Projects
-            </Link>
+            </a>
 
-            <Link href="#skills" className='text-[clamp(0.875rem,1.2vw,1.125rem)] hover:underline'>
+            <a href="#skills" className='text-[clamp(0.875rem,1.2vw,1.125rem)] hover:underline'>
               Skills
-            </Link>
+            </a>
 
-            <Link href="#about" className='text-[clamp(0.875rem,1.2vw,1.125rem)] hover:underline'>
+            <a href="#about" className='text-[clamp(0.875rem,1.2vw,1.125rem)] hover:underline'>
               About
-            </Link>
+            </a>
 
-            <Link href="#connect" className='text-[clamp(0.875rem,1.2vw,1.125rem)] hover:underline'>
+            <a href="#connect" className='text-[clamp(0.875rem,1.2vw,1.125rem)] hover:underline'>
               Connect
-            </Link>
+            </a>
           </div>
         </nav>
         <div className="w-full text-center bg-gray-100 dark:bg-zinc-800 text-gray-800 dark:text-gray-200 text-xs py-1.5 md:hidden">
