@@ -31,8 +31,8 @@ export default function Projects() {
     useOutsideClick(ref, () => setActive(null));
 
     return (
-        <div className="px-[5vw] pt-[5vh]">
-            <h2 className='text-3xl mb-6'>Projects</h2>
+        <div className="px-[5vw] pt-[2vh] md:pt-[5vh]">
+            <h2 className='text-[clamp(1.5rem,2vw,1.875rem)] pb-[1.5vh] md:text-3xl mb-6'>Projects</h2>
             <AnimatePresence>
                 {active && typeof active === "object" && (
                     <motion.div
@@ -125,13 +125,13 @@ export default function Projects() {
                     </div>
                 ) : null}
             </AnimatePresence>
-            <ul className="max-w-5xl gap-4">
+            <ul className="max-w-5xl flex flex-col gap-[3vh]">
                 {cards.map((card, index) => (
                     <motion.div
                         layoutId={`card-${card.title}-${id}`}
                         key={`card-${card.title}-${id}`}
                         onClick={() => setActive(card)}
-                        className="p-5 flex flex-col md:flex-row justify-between items-center hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-xl cursor-pointer [mask:linear-gradient(to_right,white,white,transparent)]"
+                        className="p-5 flex flex-col md:flex-row justify-between items-center border-2 rounded-2xl bg-white dark:hover:bg-neutral-800 cursor-pointer shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]"
                     >
                         <div className="flex gap-5 flex-col md:flex-row items-center">
                             <motion.div layoutId={`image-${card.title}-${id}`}>
@@ -140,13 +140,13 @@ export default function Projects() {
                                     height={100}
                                     src={card.src}
                                     alt={card.title}
-                                    className="h-40 w-40 md:h-20 md:w-20 rounded-lg object-cover object-top"
+                                    className="h-40 w-40 md:h-25 md:w-25 rounded-lg object-cover object-top"
                                 />
                             </motion.div>
                             <div className="">
                                 <motion.h3
                                     layoutId={`title-${card.title}-${id}`}
-                                    className="font-medium text-lg text-gray-800 dark:text-neutral-200 text-center md:text-left"
+                                    className="font-medium text-xl text-gray-800 dark:text-neutral-200 text-center md:text-left"
                                 >
                                     {card.title}
                                 </motion.h3>
@@ -195,7 +195,7 @@ export const CloseIcon = () => {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="h-4 w-4 text-black"
+            className="h-4 w-4 text-black dark:text-white"
         >
             <path stroke="none" d="M0 0h24v24H0z" fill="none" />
             <path d="M18 6l-12 12" />
@@ -221,7 +221,7 @@ const cards = [
                     hashing. Integrated geocoding APIs for real-time hotel location tracking and interactive
                     map display. Ensured modular backend routing with clean and responsive UI design for
                     a seamless user experience. <br />
-                    <a href="https://github.com/zekedavidson/BookHaven-Airbnb-inspired-webapp" className="text-black hover:underline">[Github Link]</a><br />
+                    <a href="https://github.com/zekedavidson/BookHaven-Airbnb-inspired-webapp" className="text-black dark:text-white hover:underline">[Github Link]</a><br />
 
                 </p>
             );
@@ -241,7 +241,26 @@ const cards = [
                     secure resume uploads, role-specific evaluation, and real-time insights using AI
                     services. Developed a responsive frontend with React, TypeScript, and TailwindCSS for
                     seamless user experience.<br />
-                    <a href="https://github.com/zekedavidson/ai-resume-analyzer" className="text-black hover:underline">[Github Link]</a><br />
+                    <a href="https://github.com/zekedavidson/ai-resume-analyzer" className="text-black dark:text-white hover:underline">[Github Link]</a><br />
+
+                </p>
+            );
+        },
+    },
+
+    {
+        description: "Next.js, React, Tailwind CSS, TypeScript",
+        title: "Minimalistic Personal Portfolio",
+        src: "/portfolio.jpeg",
+        ctaText: "View",
+        ctaLink: "https://moviedbapp-f5ml.onrender.com/",
+        content: () => {
+            return (
+                <p>
+                    Designed and developed a fully responsive, modern portfolio website to showcase web development and
+                    automation projects. Implemented a dynamic UI with custom CSS Grid layouts, interactive GSAP/Framer
+                    Motion animations, and fluid typography for seamless scaling across all devices. <br />
+                    <a href="https://github.com/zekedavidson/portfolio" className="text-black dark:text-white hover:underline">[Github Link]</a>
 
                 </p>
             );
@@ -262,7 +281,7 @@ const cards = [
                     including real-time movie search, dynamic movie cards with posters/ratings, and a fully
                     responsive UI styled with Tailwind CSS. Managed state using React Hooks and
                     leveraged Appwrite for robust backend services.<br />
-                    <a href="https://github.com/zekedavidson/moviedb-app" className="text-black hover:underline">[Github Link]</a>
+                    <a href="https://github.com/zekedavidson/moviedb-app" className="text-black dark:text-white hover:underline">[Github Link]</a>
 
                 </p>
             );

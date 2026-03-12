@@ -94,8 +94,9 @@ const IntroductionText = () => {
                         containerClassName="rounded-full"
                         as="button"
                         className="dark:bg-black bg-black text-white dark:text-white flex items-center space-x-3 px-6 hover:cursor-pointer"
-                    >
-                        <span className='flex'>Resume<ArrowUpRight /></span>
+                    >   <Link href="https://drive.google.com/file/d/1VrNbucoziy1hIfHKtGHYWqsPkT5gEGfv/view?usp=sharing" target="_blank">
+                            <span className='flex'>Resume<ArrowUpRight /></span>
+                        </Link>
                     </HoverBorderGradient>
                 </div>
                 <div className="flex justify-center text-center">
@@ -110,7 +111,7 @@ const IntroductionText = () => {
                     </HoverBorderGradient>
                 </div>
             </div>
-            <div className='items-center justify-center flex text-center mt-10 text-gray-600'>
+            <div className='items-center justify-center flex text-center mt-10 text-gray-600 dark:text-gray-400'>
                 <p ref={subTextRef}>{renderText("A fullstack developer with strong foundation and hands-on experience in React frameworks, JavaScript, and responsive websites.", 'text-[clamp(1.2rem,1vw,4rem)]', 300)}</p>
             </div>
 

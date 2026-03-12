@@ -19,7 +19,7 @@ const Card = ({ title, imageSrc, className }: cardProps) => {
                 height={100}
             />
             <div className='flex items-center justify-center px-10'>
-                <h2 className='text-lg font-bold text-gray-700 whitespace-nowrap'>{title}</h2>
+                <h2 className='text-lg font-bold text-gray-700 dark:text-gray-300 whitespace-nowrap'>{title}</h2>
             </div>
         </div>
     );

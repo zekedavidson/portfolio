@@ -3,10 +3,10 @@ import Card from '../ui/card'
 
 const Skills = () => {
     return (
-        <div className="flex px-[5vw] pt-[5vh]">
+        <div className="flex px-[5vw] pt-[2vh] md:pt-[5vh]">
             <div className='flex flex-col'>
-                <h2 className='text-3xl'>Skills</h2>
-                <h3 className='text-2xl text-gray-700 mt-5 mb-[1vh]'>Web Development Stack</h3>
+                <h2 className='text-[clamp(1.5rem,2vw,1.875rem)] pb-[1.5vh] md:text-3xl md:pb-0'>Skills</h2>
+                <h3 className='text-xl md:text-2xl text-gray-700 dark:text-gray-300 mt-2 md:mt-5 mb-[1vh]'>Web Development Stack</h3>
                 <div className='w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-[5vw] gap-y-[3vh]'>
                     <Card
                         title="HTML"
@@ -57,7 +57,7 @@ const Skills = () => {
                         imageSrc="/shadcn.png"
                     />
                 </div>
-                <h3 className='text-2xl text-gray-700 mt-[5vh] mb-[1vh]'>Automation Stack</h3>
+                <h3 className='text-xl md:text-2xl text-gray-700 dark:text-gray-300 mt-[3vh] md:mt-[5vh] mb-[1vh]'>Automation Stack</h3>
                 <div className='w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-[5vw] gap-y-[3vh]'>
                     <Card
                         title="Zapier"
