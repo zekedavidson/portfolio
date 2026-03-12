@@ -4,13 +4,14 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { Clock } from '@/components/ui/clock'
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
-import { TextEffect } from '@/components/ui/text-effect';
+import { TextLoop } from '@/components/ui/text-loop';
 import { HoverBorderGradient } from '@/components/ui/hover-border-gradient';
+import Link from 'next/link';
 
 const FONT_WEIGHTS = {
     subtitle: { min: 100, max: 400, default: 100 },
     title: { min: 400, max: 1000, default: 400 },
-    superText: { min: 100, max: 400, default: 100 }
+    subText: { min: 300, max: 900, default: 300 }
 }
 
 const renderText = (text: string, className: string, baseWeight: number = 400) => {
@@ -61,12 +62,12 @@ const setupTextHover = (container: HTMLElement | null, type: keyof typeof FONT_W
 const IntroductionText = () => {
     const titleRef = useRef(null)
     const subtitleRef = useRef(null)
-    const superTextRef = useRef(null)
+    const subTextRef = useRef(null)
 
     useGSAP(() => {
         setupTextHover(titleRef.current, 'title');
         setupTextHover(subtitleRef.current, "subtitle");
-        setupTextHover(superTextRef.current, "superText");
+        setupTextHover(subTextRef.current, "subText");
 
     }, [])
 
@@ -75,8 +76,14 @@ const IntroductionText = () => {
             {/* <p ref={superTextRef}>{renderText("Hi I'm", 'text-5xl text-left', 100)}</p> */}
             <div className='items-center justify-center text-center'>
                 <h1 ref={titleRef}>{renderText("Gary Bhatia", 'text-[clamp(3rem,8vw,7.5rem)]', 400)}</h1>
-                <p ref={subtitleRef} className='-mt-6'>{renderText("Web Developer", 'text-[clamp(1.5rem,4vw,3.75rem)] italic', 100)}</p>
             </div>
+            <div className='flex items-center justify-center -mt-6'>
+                <TextLoop className='text-sm text-[clamp(1.5rem,4vw,3.75rem)] italic font-extralight'>
+                    <span>Web Developer</span>
+                    <span className='text-[clamp(1.5rem,3vw,3.75rem)]'>Automation Specialist</span>
+                </TextLoop>
+            </div>
+
 
             <div className='flex items-center justify-center mt-5 gap-3'>
                 <p>IST</p><Clock />
@@ -97,15 +104,14 @@ const IntroductionText = () => {
                         as="button"
                         className="dark:bg-black bg-black text-white dark:text-white flex items-center space-x-3 px-6 hover:cursor-pointer"
                     >
-                        <span className='flex'>Connect<ArrowRight /></span>
+                        <Link href="#connect">
+                            <span className='flex'>Connect<ArrowRight /></span>
+                        </Link>
                     </HoverBorderGradient>
                 </div>
             </div>
-            <div className='flex text-center mt-10 text-gray-600 text-xl'>
-                <TextEffect preset='fade-in-blur' speedReveal={1.1} speedSegment={0.3}>
-                    A fullstack developer with strong foundation and hands-on experience in
-                    React frameworks, JavaScript, and responsive websites.
-                </TextEffect>
+            <div className='items-center justify-center flex text-center mt-10 text-gray-600'>
+                <p ref={subTextRef}>{renderText("A fullstack developer with strong foundation and hands-on experience in React frameworks, JavaScript, and responsive websites.", 'text-[clamp(1.2rem,1vw,4rem)]', 300)}</p>
             </div>
 
         </section >

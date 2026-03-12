@@ -1,7 +1,10 @@
 import Link from 'next/link'
 import IntroductionText from '@/components/sections/introduction/introductionText'
 import IntroductionImage from '@/components/sections/introduction/introductionImage'
-
+import Experience from '@/components/sections/experience'
+import Projects from '@/components/sections/projects'
+import Skills from '@/components/sections/skills'
+import Connect from '@/components/sections/connect'
 
 const page = () => {
   return (
@@ -17,13 +20,18 @@ const page = () => {
               Projects
             </Link>
 
-            <Link href="#contact" className='text-[clamp(0.875rem,1.2vw,1.125rem)]'>
+            <Link href="#skills" className='text-[clamp(0.875rem,1.2vw,1.125rem)]'>
+              Skills
+            </Link>
+
+            <Link href="#connect" className='text-[clamp(0.875rem,1.2vw,1.125rem)]'>
               Connect
             </Link>
           </div>
         </nav>
       </header >
 
+      {/*Introduction section*/}
       <section id='introduction' className='w-full px-[10vw] grid grid-cols-2 items-center'>
         {/* Image */}
         <div className="flex px-[5vw] pt-[8vh] justify-start max-h-[80vh]">
@@ -40,31 +48,24 @@ const page = () => {
         </div>
       </section>
 
+      {/*Experience section */}
       <section id='experience' className='w-full px-[10vw] py-[5vh]'>
-        <div className="flex px-[5vw] pt-[8vh] justify-start max-h-[80vh]">
-          <div className='flex flex-col mt-10'>
-            <h2 className='text-3xl'>Experience</h2>
-            <div className='flex flex-col'>
-              <h2 className='text-gray-700 text-2xl mt-5'>Software Development Engineer Intern</h2>
-              <h3 className='text-gray-500 text-xl'>VR Map Creators Pvt. Ltd. [June – August, 2025]</h3>
-              <p className='text-gray-700 text-xl text-justify'>Developed and tested in-house software tools, contributing to the company’s product
-                development lifecycle. Gained hands-on experience in full-stack development while
-                enhancing teamwork, collaboration, and communication skills. Worked closely with the
-                engineering team to debug, optimize, and improve existing systems for better efficiency.</p>
+        <Experience />
+      </section>
 
-              <h2 className='text-gray-700 text-2xl mt-5'>Freelance (Automation Specialist)</h2>
-              <h3 className='text-gray-500 text-xl'>[November – March, 2025]</h3>
-              <p className='text-gray-700 text-xl text-justify'>Designed and implemented advanced multi-platform automation systems using Zapier and Make.com to
-                connect tools like Airtable, Notion, Slack, Discord, Google Sheets, Typeform, Beehiiv, and webhooks.<br />Reduced manual operational workload by
-                60–70% by building scalable workflows for lead management, reporting, project tracking, email segmentation, and real-time team notifications.<br />
-                Developed centralized dashboards, automated data pipelines, and custom Discord bots to streamline data flow, improve reporting accuracy, and enhance
-                team collaboration. <br />Built error-handling and monitoring systems within automations to ensure reliability, data consistency, and scalable infrastructure
-                for growing client operations.</p>
+      {/*Projects section*/}
+      <section id='projects' className='w-full px-[10vw] py-[5vh]'>
+        <Projects />
+      </section>
 
-            </div>
+      {/*Skills*/}
+      <section id='skills' className='w-full px-[10vw] py-[5vh]'>
+        <Skills />
+      </section>
 
-          </div>
-        </div>
+      {/*Connect*/}
+      <section id='connect' className='w-full px-[10vw] py-[5vh]'>
+        <Connect />
       </section>
     </>
   )
