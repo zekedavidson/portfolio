@@ -21,6 +21,7 @@ export default function IntroductionImage() {
     return (
         <div
             ref={containerRef}
+            className="w-full h-full absolute inset-0 cursor-crosshair z-10"
             onMouseMove={handleMouseMove}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
