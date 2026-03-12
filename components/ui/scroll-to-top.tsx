@@ -24,8 +24,30 @@ export default function ScrollToTop() {
 
     useEffect(() => {
         window.addEventListener('scroll', toggleVisibility);
+
+        const handleHashClick = (e: MouseEvent) => {
+            const target = e.target as HTMLElement;
+            const anchor = target.closest('a');
+            if (!anchor) return;
+            
+            const href = anchor.getAttribute('href');
+            if (href?.startsWith('#') && href.length > 1) {
+                e.preventDefault();
+                const element = document.querySelector(href);
+                if (element) {
+                    element.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start',
+                    });
+                    history.pushState(null, '', href);
+                }
+            }
+        };
+        document.addEventListener('click', handleHashClick);
+
         return () => {
             window.removeEventListener('scroll', toggleVisibility);
+            document.removeEventListener('click', handleHashClick);
         };
     }, []);
 

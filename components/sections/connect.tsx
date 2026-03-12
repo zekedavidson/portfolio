@@ -51,7 +51,7 @@ export default function Connect() {
                                 <Card
                                     title="Gary Bhatia"
                                     imageSrc="/linked.png"
-                                    className="w-full! sm:w-fit sm:pr-15 bg-transparent"
+                                    className="w-full! sm:w-fit sm:pr-15"
                                 />
                             </Link>
 
@@ -59,14 +59,14 @@ export default function Connect() {
                                 <Card
                                     title="zekedavidson"
                                     imageSrc="/github.svg"
-                                    className="w-full! sm:w-fit sm:pr-15 bg-transparent"
+                                    className="w-full! sm:w-fit sm:pr-15"
                                 />
                             </Link>
 
                             <Card
                                 title="cheeseball28"
                                 imageSrc="/disc.png"
-                                className="w-full! sm:w-fit sm:pr-15 bg-transparent"
+                                className="w-full! sm:w-fit sm:pr-15"
                             />
 
                         </div>
