@@ -253,7 +253,7 @@ const cards = [
         title: "Minimalistic Personal Portfolio",
         src: "/portfolio.jpeg",
         ctaText: "View",
-        ctaLink: "https://moviedbapp-f5ml.onrender.com/",
+        ctaLink: "https://portfolio-zgy3.vercel.app/",
         content: () => {
             return (
                 <p>

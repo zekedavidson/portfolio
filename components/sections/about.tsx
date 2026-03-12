@@ -7,7 +7,7 @@ const About = () => {
             <h2 className='text-[clamp(1.5rem,2vw,1.875rem)] pb-[1.5vh]'>About Me</h2>
             <span className='text-gray-700 dark:text-gray-300 text-xl text-justify'>I’m a <TextShimmer>passionate</TextShimmer> developer crafting minimal, user-centric websites for people who value clarity over chaos.<br />
 
-                I believe the best digital experiences are invisible — they guide, not distract. I build with intention, design with empathy,
+                I believe the best digital experiences are invisible, they guide, not distract. I build with intention, design with empathy,
                 and code in rhythm.<br />
 
                 I don’t just ship websites.<br />
