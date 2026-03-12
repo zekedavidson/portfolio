@@ -28,7 +28,7 @@ export default function Connect() {
             <h2 className='text-[clamp(1.5rem,2vw,1.875rem)] pb-[1.5vh]'>Connect</h2>
             <div className='flex max-w-full border-2 rounded-2xl shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_41.8px_33.4px_rgba(0,_0,_0,_0.086),_0_100px_80px_rgba(0,_0,_0,_0.12)]'>
                 <div className='w-full grid grid-cols-1 md:grid-cols-2'>
-                    <div className='flex flex-col px-[5vw] md:px-[3vw] py-[4vh]'>
+                    <div className='flex flex-col px-[5vw] md:px-[3vw] py-[3vh]'>
                         <h1 className='font-bold text-[clamp(2.5rem,5vw,3.75rem)]'>Get in Touch.</h1>
                         <h3 className='px-[0.5vw] text-[clamp(1rem,1.5vw,1.25rem)]'>Got an idea, a project, or just want to talk automation, AI, or web stuff?
                             I’m always open to collaborating, solving problems, and creating smart solutions.
@@ -46,8 +46,8 @@ export default function Connect() {
                         )}
                     </div>
                     <div className='px-[5vw] md:pl-[5vw] md:px-0'>
-                        <div className='w-full flex flex-col items-center md:items-start gap-[3vh] md:gap-[5vh] pb-[6vh] md:py-[6vh]'>
-                            <Link href="https://www.linkedin.com/in/gary-bhatia/" target="_blank">
+                        <div className='w-full flex flex-col items-center justify-center md:items-start gap-[3vh] md:gap-[5vh] pb-[6vh] md:py-[6vh]'>
+                            <Link href="https://www.linkedin.com/in/gary-bhatia/" target="_blank" className="w-full! sm:w-fit block">
                                 <Card
                                     title="Gary Bhatia"
                                     imageSrc="/linked.png"
@@ -55,7 +55,7 @@ export default function Connect() {
                                 />
                             </Link>
 
-                            <Link href="https://www.github.com/zekedavidson" target="_blank">
+                            <Link href="https://www.github.com/zekedavidson" target="_blank" className="w-full! sm:w-fit block">
                                 <Card
                                     title="zekedavidson"
                                     imageSrc="/github.svg"
