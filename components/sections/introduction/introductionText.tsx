@@ -90,25 +90,27 @@ const IntroductionText = () => {
             </div>
             <div className='mt-5 flex items-center justify-center gap-[5vw]'>
                 <div className="flex justify-center text-center">
-                    <HoverBorderGradient
-                        containerClassName="rounded-full"
-                        as="button"
-                        className="dark:bg-black bg-black text-white dark:text-white flex items-center space-x-3 px-6 hover:cursor-pointer"
-                    >   <Link href="https://drive.google.com/file/d/1VrNbucoziy1hIfHKtGHYWqsPkT5gEGfv/view?usp=sharing" target="_blank">
+                    <Link href="https://drive.google.com/file/d/1VrNbucoziy1hIfHKtGHYWqsPkT5gEGfv/view?usp=sharing" target="_blank">
+                        <HoverBorderGradient
+                            containerClassName="rounded-full"
+                            as="button"
+                            className="dark:bg-black bg-black text-white dark:text-white flex items-center space-x-3 px-6 hover:cursor-pointer"
+                        >
                             <span className='flex'>Resume<ArrowUpRight /></span>
-                        </Link>
-                    </HoverBorderGradient>
+                        </HoverBorderGradient>
+                    </Link>
+
                 </div>
                 <div className="flex justify-center text-center">
-                    <HoverBorderGradient
-                        containerClassName="rounded-full"
-                        as="button"
-                        className="dark:bg-black bg-black text-white dark:text-white flex items-center space-x-3 px-6 hover:cursor-pointer"
-                    >
-                        <a href="#connect">
+                    <a href="#connect">
+                        <HoverBorderGradient
+                            containerClassName="rounded-full"
+                            as="button"
+                            className="dark:bg-black bg-black text-white dark:text-white flex items-center space-x-3 px-6 hover:cursor-pointer"
+                        >
                             <span className='flex'>Connect<ArrowRight /></span>
-                        </a>
-                    </HoverBorderGradient>
+                        </HoverBorderGradient>
+                    </a>
                 </div>
             </div>
             <div className='items-center justify-center flex text-center mt-10 text-gray-600 dark:text-gray-400'>
