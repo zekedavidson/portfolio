@@ -57,7 +57,7 @@ const Skills = () => {
                         imageSrc="/shadcn.png"
                     />
                 </div>
-                <h3 className='text-xl md:text-2xl text-gray-700 dark:text-gray-300 mt-[3vh] md:mt-[5vh] mb-[1vh]'>Automation Stack</h3>
+                <h3 className='text-xl md:text-2xl text-gray-700 dark:text-gray-300 mt-[3vh] md:mt-[5vh] mb-[1vh]'>AI & Automation Stack</h3>
                 <div className='w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-[5vw] gap-y-[3vh]'>
                     <Card
                         title="Zapier"
@@ -70,6 +70,22 @@ const Skills = () => {
                     <Card
                         title="OpenAI"
                         imageSrc="/openai.png"
+                    />
+                    <Card
+                        title="Gemini"
+                        imageSrc="/gemini.png"
+                    />
+                    <Card
+                        title="Lovable"
+                        imageSrc="/lovable.png"
+                    />
+                    <Card
+                        title="Cursor"
+                        imageSrc="/cursor.png"
+                    />
+                    <Card
+                        title="Antigravity"
+                        imageSrc="/antigravity.png"
                     />
                     <Card
                         title="n8n"

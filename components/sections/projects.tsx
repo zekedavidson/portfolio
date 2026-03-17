@@ -69,7 +69,7 @@ export default function Projects() {
                         <motion.div
                             layoutId={`card-${active.title}-${id}`}
                             ref={ref}
-                            className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
+                            className="w-full max-w-[500px]  h-full md:h-fit md:max-h-[90%]  flex flex-col border-2 bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]"
                         >
                             <motion.div layoutId={`image-${active.title}-${id}`}>
                                 <img
@@ -131,7 +131,7 @@ export default function Projects() {
                         layoutId={`card-${card.title}-${id}`}
                         key={`card-${card.title}-${id}`}
                         onClick={() => setActive(card)}
-                        className="p-5 flex flex-col md:flex-row justify-between items-center border-2 rounded-2xl bg-white dark:hover:bg-neutral-800 cursor-pointer shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]"
+                        className="p-5 flex flex-col md:flex-row justify-between items-center border-2 rounded-2xl bg-white hover:bg-neutral-100 dark:hover:bg-neutral-800 cursor-pointer shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]"
                     >
                         <div className="flex gap-5 flex-col md:flex-row items-center">
                             <motion.div layoutId={`image-${card.title}-${id}`}>
@@ -205,6 +205,30 @@ export const CloseIcon = () => {
 };
 
 const cards = [
+    {
+        description: "React-Refine, Node.js, Express, PostgreSQL",
+        title: "Classroom Management Dashboard [Currently in Progress]",
+        src: "/classroom-dashboard.jpeg",
+        ctaText: "WIP",
+        ctaLink: "https://github.com/zekedavidson/classroom-dashboard",
+        content: () => {
+            return (
+                <p>
+                    <b>THIS PROJECT IS CURRENTLY IN PROGRESS </b><br /><br />
+                    Developing a full-stack educational dashboard adhering to REST API principles, enabling administrators to seamlessly add subjects, manage class details, and track performance reports.
+                    <br />
+                    Engineered a scalable backend with Node.js, Express, and PostgreSQL, ensuring efficient data relations and fast query execution for complex class tracking.
+                    <br />
+                    Implemented secure and frictionless user access by integrating Better Auth for authentication and fortified the application against bot attacks and vulnerabilities using Arcjet.
+                    <br />
+                    Optimized application uptime and performance by integrating Site24x7 APM for continuous 24/7 server monitoring, error tracking, and system analysis. <br />
+
+                    <a href="https://github.com/zekedavidson/classroom-dashboard" className="text-black dark:text-white hover:underline">[Github Link]</a><br />
+
+                </p>
+            );
+        },
+    },
     {
         description: "JavaScript, Node.js, Express.js, MongoDB, HTML, CSS",
         title: "BookHaven (AirBnb Inspired Hotel Booking Webapp)",
