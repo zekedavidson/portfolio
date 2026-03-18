@@ -90,7 +90,7 @@ const IntroductionText = () => {
             </div>
             <div className='mt-5 flex items-center justify-center gap-[5vw]'>
                 <div className="flex justify-center text-center">
-                    <Link href="https://drive.google.com/file/d/1PwH4RvpGSHiIamSk5E8jrtETNPfbXbta/view?usp=sharing" target="_blank">
+                    <Link href="https://drive.google.com/file/d/1LTpU6tofismU102nwnnaiFHRDZKJ7OU8/view?usp=sharing" target="_blank">
                         <HoverBorderGradient
                             containerClassName="rounded-full"
                             as="button"
