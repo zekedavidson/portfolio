@@ -206,7 +206,7 @@ export const CloseIcon = () => {
 
 const cards = [
     {
-        description: "React-Refine, Node.js, Express, PostgreSQL",
+        description: "React-Refine, Node.js, Express, PostgreSQL, Better-Auth, Arcjet",
         title: "Classroom Management Dashboard [Currently in Progress]",
         src: "/classroom-dashboard.jpeg",
         ctaText: "WIP",
@@ -214,8 +214,7 @@ const cards = [
         content: () => {
             return (
                 <p>
-                    <b>THIS PROJECT IS CURRENTLY IN PROGRESS </b><br /><br />
-                    Developing a full-stack educational dashboard adhering to REST API principles, enabling administrators to seamlessly add subjects, manage class details, and track performance reports.
+                    Developed a full-stack educational dashboard adhering to REST API principles, enabling administrators to seamlessly add subjects, manage class details, and track performance reports.
                     <br />
                     Engineered a scalable backend with Node.js, Express, and PostgreSQL, ensuring efficient data relations and fast query execution for complex class tracking.
                     <br />
