@@ -207,7 +207,7 @@ export const CloseIcon = () => {
 const cards = [
     {
         description: "React-Refine, Node.js, Express, PostgreSQL, Better-Auth, Arcjet",
-        title: "Classroom Management Dashboard [Currently in Progress]",
+        title: "Classroom Management Dashboard",
         src: "/classroom-dashboard.jpeg",
         ctaText: "View",
         ctaLink: "https://classroom-dashboard-frontend-fc1a.vercel.app/",
