@@ -209,8 +209,8 @@ const cards = [
         description: "React-Refine, Node.js, Express, PostgreSQL, Better-Auth, Arcjet",
         title: "Classroom Management Dashboard [Currently in Progress]",
         src: "/classroom-dashboard.jpeg",
-        ctaText: "WIP",
-        ctaLink: "https://github.com/zekedavidson/classroom-dashboard",
+        ctaText: "View",
+        ctaLink: "https://classroom-dashboard-frontend-fc1a.vercel.app/",
         content: () => {
             return (
                 <p>
