@@ -30,10 +30,12 @@ const Experience = () => {
                 <div className='flex flex-col'>
                     <h2 className='text-gray-700 dark:text-gray-200 text-xl md:text-2xl mt-5'>Software Development Engineer Intern</h2>
                     <h3 className='text-gray-500 dark:text-gray-400 text-lg md:text-xl'>VR Map Creators Pvt. Ltd. [June – August, 2025]</h3>
-                    <p className='text-gray-700 dark:text-gray-300 text-base md:text-xl text-justify'>Developed and tested in-house software tools, contributing to the company&apos;s product
-                        development lifecycle. Gained hands-on experience in full-stack development while
-                        enhancing teamwork, collaboration, and communication skills. Worked closely with the
-                        engineering team to debug, optimize, and improve existing systems for better efficiency.</p>
+                    <p className='text-gray-700 dark:text-gray-300 text-base md:text-xl text-justify'>
+                        <ReadMore
+                            text="Engineered and deployed robust internal full-stack utility applications, effectively automating repetitive manual testing workflows. This initiative saved the engineering team an estimated 5-10 hours of manual labor per week, enabling a stronger focus on core product features. Actively collaborated with a cross functional team of 20 members to systematically debug, optimize, and refactor the existing legacy codebase. This team effort resulted in a 45% reduction in overall system latency, tangibly improving product responsiveness and stability. Furthermore, consistently engaged in daily stand ups and more than 10 workflow reviews, playing a key role in fostering transparent team communication. This alignment and continuous feedback loop directly contributed to a 30% increase in sprint delivery rates, accelerating overall development cycles."
+                            limit={200}
+                        />
+                    </p>
 
                     <h2 className='text-gray-700 dark:text-gray-200 text-xl md:text-2xl mt-5'>Freelance (Automation Specialist)</h2>
                     <h3 className='text-gray-500 dark:text-gray-400 text-lg md:text-xl'>[November – March, 2025]</h3>
